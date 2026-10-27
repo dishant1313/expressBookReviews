@@ -1,0 +1,15 @@
+Description: Retrieve all books matching a given author name using asynchronous handling with Axios.
+Command:
+curl.exe -i "http://localhost:5000/author/Jane%20Austen"
+
+Output:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 69
+ETag: W/"45-O7hLzEuskUk3HfwJZXpwEzAzgXQ"
+Date: Tue, 27 Oct 2026 21:30:59 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+[{"author":"Jane Austen","title":"Pride and Prejudice","reviews":{}}]

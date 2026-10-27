@@ -1,0 +1,15 @@
+Description: Register a new user with valid username and password credentials.
+Command:
+curl.exe -i -X POST http://localhost:5000/register -H "Content-Type: application/json" -d "{\"username\":\"student_660076\",\"password\":\"[REDACTED_PASSWORD]\"}"
+
+Output:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 61
+ETag: W/"3d-v6m6Uonx379AzEulAwPVnSwqyJQ"
+Date: Tue, 27 Oct 2026 21:31:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"User successfully registered. Now you can login"}

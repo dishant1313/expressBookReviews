@@ -1,0 +1,30 @@
+Description: Add a new book review for ISBN 1 under the authenticated session. Includes verification of stored review data.
+Command:
+curl.exe -i -b "E:\node\final_project\cookie.txt" -X PUT "http://localhost:5000/customer/auth/review/1?review=A%20timeless%20masterpiece%20of%20literature%20with%20profound%20cultural%20significance."
+
+Output:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 188
+ETag: W/"bc-EqkEW/O3vw6y5CqFLHQl6p7ui5Q"
+Date: Tue, 27 Oct 2026 21:31:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Review for ISBN 1 by user 'student_660076' added/updated successfully","reviews":{"student_660076":"A timeless masterpiece of literature with profound cultural significance."}}
+
+Verification Query:
+curl.exe -i http://localhost:5000/review/1
+
+Verification Output:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 94
+ETag: W/"5e-FoSyH+wxXth0PBXjKjjbPekdV1U"
+Date: Tue, 27 Oct 2026 21:31:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"student_660076":"A timeless masterpiece of literature with profound cultural significance."}

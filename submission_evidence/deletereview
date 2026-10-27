@@ -1,0 +1,30 @@
+Description: Delete the authenticated user's review for ISBN 1. Includes verification that the review has been removed.
+Command:
+curl.exe -i -b "E:\node\final_project\cookie.txt" -X DELETE http://localhost:5000/customer/auth/review/1
+
+Output:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 78
+ETag: W/"4e-rT/+AGwoo1znfxeGKxIiUaW/iFc"
+Date: Tue, 27 Oct 2026 21:31:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Review for ISBN 1 posted by student_660076 deleted.","reviews":{}}
+
+Verification Query:
+curl.exe -i http://localhost:5000/review/1
+
+Verification Output:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+ETag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+Date: Tue, 27 Oct 2026 21:31:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{}

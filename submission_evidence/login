@@ -1,0 +1,16 @@
+Description: Authenticate user using registered credentials and obtain JWT access token and session cookie.
+Command:
+curl.exe -i -c cookie.txt -X POST http://localhost:5000/customer/login -H "Content-Type: application/json" -d "{\"username\":\"student_660076\",\"password\":\"[REDACTED_PASSWORD]\"}"
+
+Output:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 217
+ETag: W/"d9-1LkTzhSv1LVA4AsFIIZN6kLarkU"
+Set-Cookie: connect.sid=s%3A[REDACTED_SESSION_COOKIE]; Path=/; HttpOnly
+Date: Tue, 27 Oct 2026 21:31:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"User successfully logged in","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0dWRlbnRfNjYwMDc2IiwiaWF0IjoxNzkzMTM2NjYwLCJleHAiOjE3OTMxNDAyNjB9.[REDACTED_JWT_SIGNATURE]"}

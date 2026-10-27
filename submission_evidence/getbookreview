@@ -1,0 +1,15 @@
+Description: Retrieve initial reviews associated with a specified book ISBN.
+Command:
+curl.exe -i http://localhost:5000/review/1
+
+Output:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+ETag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+Date: Tue, 27 Oct 2026 21:31:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{}
